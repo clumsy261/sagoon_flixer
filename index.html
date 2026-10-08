@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagoon Flixer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-layout">
+        <main class="main-content">
+            <div class="container">
+                <header>
+                    <h1>Sagoon Flixer</h1>
+                </header>
+                
+                <div class="search-section">
+                    <input type="text" id="searchInput" placeholder="Search movies and TV shows... (press Enter)" autocomplete="off">
+                    <div id="loading" class="loading hidden">Searching...</div>
+                </div>
+
+                <section class="results-section">
+                    <h2>Movies</h2>
+                    <div id="moviesRow" class="content-row"></div>
+                </section>
+
+                <section class="results-section">
+                    <h2>TV Shows</h2>
+                    <div id="tvShowsRow" class="content-row"></div>
+                </section>
+            </div>
+        </main>
+
+        <aside id="torrentPanel" class="torrent-panel hidden">
+            <div class="panel-header">
+                <h3 id="panelTitle">Select Torrent</h3>
+                <button id="closePanel" class="close-btn" aria-label="Close panel">×</button>
+            </div>
+            <div class="panel-content">
+                <div id="torrentLoading" class="loading hidden">Fetching torrents...</div>
+                <div id="torrentList" class="torrent-list"></div>
+                <div id="torrentEmpty" class="empty-state hidden">No torrents found</div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
